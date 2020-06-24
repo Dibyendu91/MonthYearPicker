@@ -5,7 +5,7 @@ This is a library to open a picker with month and year view. You can pick any mo
 picker and you will receive a calender instance from where you can fetch selected month year.
 
 ## Preview
-![app_view](screen_shots/month-year-picker.gif)
+![app_view](screen_shots/month-year-picker.gif =100x200)
 
 ## Installation
 Use the following step to use this library.
