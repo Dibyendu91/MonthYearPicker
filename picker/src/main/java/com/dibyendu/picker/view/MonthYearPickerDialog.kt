@@ -2,7 +2,6 @@ package com.dibyendu.picker.view
 
 import android.app.Dialog
 import android.graphics.Rect
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -11,13 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dibyendu.picker.R
 import com.dibyendu.picker.databinding.DialogMonthYearChooserBinding
 import com.dibyendu.picker.listener.PickerListener
 import com.dibyendu.picker.listener.ResultListener
 import com.dibyendu.picker.model.Item
 import com.dibyendu.picker.util.PickerUtils
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.dialog_month_year_chooser.*
 import java.util.*
 
 class MonthYearPickerDialog : DialogFragment() {
@@ -34,18 +33,13 @@ class MonthYearPickerDialog : DialogFragment() {
             val inflater = requireActivity().layoutInflater
             binding = DialogMonthYearChooserBinding.inflate(inflater)
             builder.setView(binding.root)
-                .setPositiveButton(
-                    R.string.ok
-                ) { dialog, _ ->
-                    listener.onSetResult(calendar)
-                    dialog.dismiss()
-                }
-                .setNegativeButton(
-                    R.string.cancel
-                ) { dialog, _ ->
-                    dialog.dismiss()
-                }
-
+            binding.button.setOnClickListener {
+                listener.onSetResult(calendar)
+                dismiss()
+            }
+            binding.button2.setOnClickListener {
+                dismiss()
+            }
             calendar = Calendar.getInstance(Locale.ENGLISH)
             binding.viewPager.adapter = ScreenSlidePagerAdapter(this)
             calendar.set(Calendar.YEAR, requireArguments().getInt(PickerUtils.YEAR_TAG))
@@ -128,12 +122,12 @@ class MonthYearPickerDialog : DialogFragment() {
         }
 
         fun show(
-            activity: FragmentActivity,
+            context: FragmentActivity,
             calendar: Calendar = Calendar.getInstance(),
             listener: PickerListener
         ) {
             newInstance(listener, calendar).show(
-                activity.supportFragmentManager,
+                context.supportFragmentManager,
                 MonthYearPickerDialog::class.java.simpleName
             )
         }

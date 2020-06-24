@@ -1,2 +1,3 @@
+include ':sample'
 include ':picker'
 rootProject.name = "MonthYearPicker"
