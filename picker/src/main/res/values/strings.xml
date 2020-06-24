@@ -1,0 +1,7 @@
+<resources>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="month_year">%1$s, %2$s</string>
+    <string name="open_picker">Open Picker</string>
+    <string name="select_month_year">Select Month and Year</string>
+</resources>

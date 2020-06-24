@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chip"
+    style="@style/Widget.MaterialComponents.Chip.Choice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:textAlignment="center"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:chipBackgroundColor="@color/bg_chip_state_list"
+    app:textEndPadding="16dp"
+    app:textStartPadding="16dp" />
