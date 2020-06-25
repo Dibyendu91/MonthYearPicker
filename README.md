@@ -21,7 +21,7 @@ repositories {
     }
 
 dependencies {
-implementation 'com.dibyendu.picker:picker:1.0.0'
+  implementation 'com.dibyendu.picker:picker:1.0.0'
 }
 ```
 Or use Maven:
