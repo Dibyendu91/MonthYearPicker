@@ -22,7 +22,12 @@ repositories {
 
 dependencies {
   implementation 'com.dibyendu.picker:picker:1.0.0'
+  implementation "com.google.android.material:material:${material_version}"
 }
+
+buildFeatures {
+        viewBinding = true
+    }
 ```
 Or use Maven:
 ```maven
