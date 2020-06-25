@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.dibyendu.picker'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.dibyendu.picker'
+                artifactId 'picker'
+
+                name 'MonthYearPicker'
+                description 'This is an android library to open a month and year picker.'
+                url 'https://github.com/Dibyendu91/MonthYearPicker'
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'dibyendu91'
+                        name 'Dibyendu Das'
+                        email 'dibyendudas.mail@gmail.com'
+                    }
+                }
+                scm {
+                    connection 'https://github.com/Dibyendu91/MonthYearPicker.git'
+                    developerConnection 'https://github.com/Dibyendu91/MonthYearPicker.git'
+                    url 'https://github.com/Dibyendu91/MonthYearPicker'
+
+                }
+            }
+        }
+    }
+}

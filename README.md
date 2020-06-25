@@ -19,6 +19,16 @@ repositories {
         google()
         jcenter()
     }
+implementation 'com.dibyendu.picker:picker:1.0.0'
+```
+Or use Maven:
+```maven
+<dependency>
+  <groupId>com.dibyendu.picker</groupId>
+  <artifactId>picker</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
 ```
 
 ## Usage
@@ -68,5 +78,4 @@ picker.
      1. **calendar**: Calendar instance.
      1. **format**: Format type. It is an optional parameter. If you don't provide any format, by 
      default it will take `LONG` format.
-* **getYear(calendar: Calendar)**: Use this method to get only selected year from picker. 
-      1. **calendar**: Calendar instance.     
+* **getYear(calendar: Calendar)**: Use this method to get only selected year from picker.
