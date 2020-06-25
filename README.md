@@ -19,7 +19,10 @@ repositories {
         google()
         jcenter()
     }
+
+dependencies {
 implementation 'com.dibyendu.picker:picker:1.0.0'
+}
 ```
 Or use Maven:
 ```maven
