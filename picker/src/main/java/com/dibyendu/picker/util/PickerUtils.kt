@@ -62,7 +62,7 @@ object PickerUtils {
         return items
     }
 
-    internal fun getMonth(calendar: Calendar, format: Format = Format.LONG): String? {
+    fun getMonth(calendar: Calendar, format: Format = Format.LONG): String? {
         return calendar.getDisplayName(
             Calendar.MONTH,
             if (format == Format.LONG) Calendar.LONG else Calendar.SHORT,
@@ -70,7 +70,7 @@ object PickerUtils {
         )
     }
 
-    internal fun getYear(calendar: Calendar): String? {
+    fun getYear(calendar: Calendar): String? {
         return calendar.get(Calendar.YEAR).toString()
     }
 

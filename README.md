@@ -5,7 +5,9 @@ This is a library to open a picker with month and year view. You can pick any mo
 picker and you will receive a calender instance from where you can fetch selected month year.
 
 ## Preview
-<img src="screen_shots/month-year-picker.gif" width="300" align="right" hspace="20"/>
+<img src="screen_shots/month-view.png" width="200" align="left" hspace="20"/>
+<img src="screen_shots/year-view.png" width="200" align="center" hspace="20"/>
+<img src="screen_shots/month-year-picker.gif" width="200" align="right" hspace="20"/>
 
 ## Setup
 Use the following step to use this library.
@@ -61,3 +63,10 @@ get month display name as given format.
     1. **calendar**: Calendar instance.
     1. **format**: Format type. It is an optional parameter. If you don't provide any format, by 
     default it will take `LONG` format.
+* **getMonth(calendar: Calendar, format: Format)**: Use this method to get only selected month from 
+picker. 
+     1. **calendar**: Calendar instance.
+     1. **format**: Format type. It is an optional parameter. If you don't provide any format, by 
+     default it will take `LONG` format.
+* **getYear(calendar: Calendar)**: Use this method to get only selected year from picker. 
+      1. **calendar**: Calendar instance.     
